@@ -1,13 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Header from "../components/Header/Header";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.background}></div>
-      <header className={styles.header}>
-        <h1>Hello i'm Lautaro</h1>
-      </header>
+      <Header />
+      <section className={styles.section}>
+        <h1>otros contenidos</h1>
+      </section>
     </main>
   );
 }

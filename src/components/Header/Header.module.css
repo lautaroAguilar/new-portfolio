@@ -1,0 +1,15 @@
+.header{
+    width: 50%;
+  height: 30dvh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: self-start;
+    margin-top: 2rem;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
