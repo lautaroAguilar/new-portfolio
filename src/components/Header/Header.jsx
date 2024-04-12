@@ -3,9 +3,10 @@ import Link from 'next/link'
 import styles from './Header.module.css'
 
 export default function Header() {
+    
   return (
-    <header className={styles.header}>
-      <div className={styles.content}>
+    <header className={styles.header} >
+      <div className={styles.texts}>
         <h1>Lautaro Aguilar</h1>
         <p>
             Web Developer.
