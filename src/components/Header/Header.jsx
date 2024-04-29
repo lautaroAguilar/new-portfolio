@@ -1,10 +1,11 @@
 "use client";
 import { useAppContext } from "@/context/appContext";
 import styles from "./Header.module.css";
-import { Playfair_Display } from "next/font/google";
-export const playfair = Playfair_Display({
-  weight: ["400", "700", "900",],
+import { Roboto} from "next/font/google";
+export const playfair = Roboto({
+  weight: ["100","300", "700", "900",],
   subsets: ["latin"],
+  style: ["italic", "normal"]
 });
 export default function Header() {
   const { changeSection } = useAppContext();
@@ -12,21 +13,21 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.texts}>
         <h1 className={`${playfair.className} ${styles.title}`}>Lautaro Aguilar</h1>
-        <p className={styles.description}>WEB DEVELOPER</p>
+        <p className={styles.description}>Web Developer</p>
       </div>
       <div className={styles.links}>
         <ul>
           <li className={styles.link} onClick={() => changeSection("Inicio")}>
-            INICIO
+            Inicio
           </li>
           <li className={styles.link} onClick={() => changeSection("Contacto")}>
-            CONTACTO
+            Contacto
           </li>
           <li
             className={styles.link}
             onClick={() => changeSection("Proyectos")}
           >
-            PROYECTOS
+            Proyectos
           </li>
         </ul>
       </div>

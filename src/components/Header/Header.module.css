@@ -24,8 +24,9 @@
     height: 50%;
 }
 .title{
-    font-weight: 700;
+    font-weight: 300;
     font-size: 3rem;
+    
 }
 .description{
     font-weight: 400;

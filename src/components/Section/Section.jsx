@@ -10,8 +10,8 @@ export default function Section() {
       {sectionState === "Inicio" && (
         <div className={styles.container}>
           <p className={` ${styles.description}`}>
-            ACÁ VOY A ESCRIBIR UNAS COSAS RANDOM SOLO PARA VER COMO QUEDA LA
-            TIPOGRAFIA XD
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum minima corrupti numquam consequuntur saepe impedit doloremque, voluptas, eos ad inventore nostrum veritatis nulla enim. Mollitia labore obcaecati ea ex rem.
+            Consectetur quisquam dicta impedit laborum! Voluptates repellendus soluta dignissimos atque perspiciatis delectus impedit illo consectetur obcaecati rem quo iste voluptate nesciunt excepturi magnam, quas quae explicabo eveniet. Nesciunt, repudiandae blanditiis?
           </p>
         </div>
       )}
