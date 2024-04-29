@@ -5,20 +5,10 @@
   align-items: center;
   min-height: 100dvh;  
   z-index: 100;
-  padding: 0 4rem;
-  
+  padding: 2rem;
+  position: relative;
 }
-.background{
-  position: absolute;
-  width: 100%;
-  height: 100%  ;
-  background-image: url('../../public/noise.svg');
-  animation: animateBG 80ms ease infinite;
-  overflow: hidden;
-  z-index: 10;
-  left: 0;
-  top: 0;
-}
+
 .header{
   width: 100%;
   height: auto;
@@ -26,7 +16,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 2rem 0
+}
+.section{
+  width: 20%;
+  height: auto;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -36,21 +32,4 @@
 /* Mobile */
 @media (max-width: 700px) {
   
-}
-@keyframes animateBG {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  25% {
-    transform: translateX(.5%) translateY(0);
-  }
-  50% {
-    transform: translateX(.5%) translateY(.5%);
-  }
-  75% {
-    transform: translateX(0) translateY(.5%);
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-  }
 }

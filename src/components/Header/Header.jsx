@@ -1,24 +1,36 @@
-'use client'
-import Link from 'next/link'
-import styles from './Header.module.css'
-
+"use client";
+import { useAppContext } from "@/context/appContext";
+import styles from "./Header.module.css";
+import { Bodoni_Moda} from "next/font/google";
+export const bodoni = Bodoni_Moda({
+  weight: ["400", "700", "900",],
+  subsets: ["latin"],
+  style: ["italic", "normal"]
+});
 export default function Header() {
-    
+  const { changeSection } = useAppContext();
   return (
-    <header className={styles.header} >
+    <header className={styles.header}>
       <div className={styles.texts}>
-        <h1>Lautaro Aguilar</h1>
-        <p>
-            Web Developer.
-        </p>
+        <h1 className={`${bodoni.className} ${styles.title}`}>Lautaro Aguilar</h1>
+        <p className={styles.description}>Web Developer</p>
       </div>
       <div className={styles.links}>
-        <Link href="/">Inico</Link>
-        <Link href="/about">Sorbre mí</Link>
-        <Link href="/work">Trabajos</Link>
-        <Link href="/contact">Contacto</Link>
+        <ul>
+          <li className={styles.link} onClick={() => changeSection("Inicio")}>
+            Inicio
+          </li>
+          <li className={styles.link} onClick={() => changeSection("Contacto")}>
+            Contacto
+          </li>
+          <li
+            className={styles.link}
+            onClick={() => changeSection("Proyectos")}
+          >
+            Proyectos
+          </li>
+        </ul>
       </div>
     </header>
-  )
+  );
 }
-
