@@ -92,7 +92,7 @@ const fragmentShaderSource = `
     vec2 uv = gl_FragCoord.xy / u_resolution;
 
     // Convertir a blanco y negro y hacer la animación más suave
-    vec3 color = vec3(0.1);
+    vec3 color = vec3(0.0);
 
     // Agregar efecto de grano con píxeles más grandes y reducir la intensidad
     float grain = random(u_time + gl_FragCoord.x + gl_FragCoord.y * 0.1) * 0.1; // Reducir la intensidad del grano

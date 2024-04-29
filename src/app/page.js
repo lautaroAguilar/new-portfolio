@@ -5,10 +5,10 @@ import BackgroundAnimation from "@/components/BackgroundAnimation/BackgroundAnim
 import Section from "@/components/Section/Section";
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} ${styles.background}`}>
       <BackgroundAnimation/>
       <Header />
-      <section className={styles.section}>
+      <section className={`${styles.section}`}>
         <Section/>
       </section>
     </main>
