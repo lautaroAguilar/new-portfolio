@@ -18,16 +18,16 @@ export default function Section() {
       {sectionState === "Proyectos" && (
         <div className={styles.container}>
           <p className={` ${styles.description}`}>
-            ACÁ VOY A ESCRIBIR UNAS COSAS RANDOM SOLO PARA VER COMO QUEDA LA
-            TIPOGRAFIA XD
+            Aorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum minima corrupti numquam consequuntur saepe impedit doloremque, voluptas, eos ad inventore nostrum veritatis nulla enim. Mollitia labore obcaecati ea ex rem.
+            Consectetur quisquam dictaA XD
           </p>
         </div>
       )}
       {sectionState === "Contacto" && (
         <div className={styles.container}>
           <p className={` ${styles.description}`}>
-            ACÁ VOY A ESCRIBIR UNAS COSAS RANDOM SOLO PARA VER COMO QUEDA LA
-            TIPOGRAFIA XD
+            Aorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum minima corrupti numquam consequuntur saepe impedit doloremque, voluptas, eos ad inventore nostrum veritatis nulla enim. Mollitia labore obcaecati ea ex rem.
+            Consectetur  asd  asdas asd as das das da a q 2easd a sdas dquisquam dictaA XD
           </p>
         </div>
       )}

@@ -1,9 +1,9 @@
 "use client";
 import { useAppContext } from "@/context/appContext";
 import styles from "./Header.module.css";
-import { Roboto} from "next/font/google";
-export const roboto = Roboto({
-  weight: ["100","300", "700", "900",],
+import { Bodoni_Moda} from "next/font/google";
+export const bodoni = Bodoni_Moda({
+  weight: ["400", "700", "900",],
   subsets: ["latin"],
   style: ["italic", "normal"]
 });
@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.texts}>
-        <h1 className={`${roboto.className} ${styles.title}`}>Lautaro Aguilar</h1>
+        <h1 className={`${bodoni.className} ${styles.title}`}>Lautaro Aguilar</h1>
         <p className={styles.description}>Web Developer</p>
       </div>
       <div className={styles.links}>
