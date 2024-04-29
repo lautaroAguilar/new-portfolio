@@ -1,10 +1,10 @@
 import "./globals.css";
-import {Montserrat} from 'next/font/google'
-
-const montserrat = Montserrat({
-    weight: ['400','200'],
-    subsets: ['latin']
-})
+import { DM_Mono } from "next/font/google";
+import { AppProvider } from "@/context/appContext";
+const dm_mono = DM_Mono({
+  weight: ["400", "500"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -13,10 +13,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>
-        {children}
-      </body>
-    </html>
+    <AppProvider>
+      <html lang="en">
+        <body className={dm_mono.className}>{children}</body>
+      </html>
+    </AppProvider>
   );
 }
