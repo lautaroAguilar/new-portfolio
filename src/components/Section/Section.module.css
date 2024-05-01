@@ -15,3 +15,32 @@
   font-size: 10px;
   font-weight: 500;
 }
+.fade_out_left {
+  animation: fadeOutLeft 0.5s forwards;
+}
+
+.fade_in_right {
+  animation: fadeInRight 0.5s forwards;
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
