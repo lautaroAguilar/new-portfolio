@@ -15,8 +15,7 @@ export default function Header() {
         <h1 className={`${bodoni.className} ${styles.title}`}>Lautaro Aguilar</h1>
         <p className={styles.description}>Web Developer</p>
       </div>
-      <div className={styles.links}>
-        <ul>
+        <ul className={styles.links}>
           <li className={styles.link} onClick={() => changeSection("Inicio")}>
             Inicio
           </li>
@@ -30,7 +29,6 @@ export default function Header() {
             Proyectos
           </li>
         </ul>
-      </div>
     </header>
   );
 }

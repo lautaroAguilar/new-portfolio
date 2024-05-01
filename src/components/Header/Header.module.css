@@ -1,5 +1,5 @@
-.header{
-    width: 50%;
+.header {
+  width: 50%;
   height: 40dvh;
   display: flex;
   justify-content: space-between;
@@ -7,30 +7,71 @@
   align-items: flex-start;
   align-self: self-start;
 }
-.links{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    height: 50%;
+.links {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
-.link{
-    list-style: none;
-    font-weight: 400;
-    font-size: 12px;
-    padding: 4px 0;
+.link {
+  list-style: none;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 4px 0;
 }
-.texts{
-    height: 50%;
+.link:hover {
+  color: #ffffff; /* color del texto */
+  animation: shining 1s ease-in-out infinite;
+  cursor: pointer;
 }
-.title{
-    font-weight: 700;
-    font-size: 3rem;
-    
+.texts {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.description{
-    font-weight: 400;
-    font-size: 12px;
+.title {
+  font-weight: 700;
+  font-size: 3rem;
+  animation: titleShining 1s ease-in-out infinite;
+}
+.description {
+  font-weight: 400;
+  font-size: 12px;
 }
 
-
+@keyframes shining {
+  0% {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff,
+      0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff, 0 0 35px #ffffff,
+      0 0 45px #ffffff, 0 0 55px #ffffff, 0 0 65px #ffffff, 0 0 75px #ffffff;
+    opacity: 0.9;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff,
+      0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
+    opacity: 1;
+  }
+}
+@keyframes titleShining {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.3),
+      0 0 50px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.3),
+      0 0 60px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.3),
+      0 0 50px rgba(255, 255, 255, 0.3);
+  }
+}
