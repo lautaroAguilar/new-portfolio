@@ -1,0 +1,33 @@
+.social_media{
+    display: flex;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+    gap: 1rem;
+}
+.social_media svg{
+    color: #F5F5F5
+}
+
+.shining{
+    color:#F5F5F5;
+    font-size: 1.5rem;
+}
+.shining:hover {
+    animation: shining 1s ease-in-out infinite; 
+    cursor: pointer;
+}
+@keyframes shining {
+    0% {
+        filter: drop-shadow(0 0 1px #ffffff22) drop-shadow(0 0 2px #ffffff22) drop-shadow(0 0 3px #ffffff22) drop-shadow(0 0 4px #ffffff22) drop-shadow(0 0 5px #ffffff22) drop-shadow(0 0 6px #ffffff22) drop-shadow(0 0 7px #ffffff22);
+        opacity: 0.9;
+      }
+      50% {
+        filter: drop-shadow(0 0 .5px #ffffff22) drop-shadow(0 0 1.5px #ffffff22) drop-shadow(0 0 2.5px #ffffff22) drop-shadow(0 0  3.5px #ffffff22) drop-shadow(0 0 4.5px #ffffff22) drop-shadow(0 0 5.5px #ffffff22) drop-shadow(0 0 6.5px #ffffff22);
+        opacity: 1;
+      }
+      100% {
+        filter: drop-shadow(0 0 1px #ffffff22) drop-shadow(0 0 2px #ffffff22) drop-shadow(0 0 3px #ffffff22) drop-shadow(0 0 4px #ffffff22) drop-shadow(0 0 5px #ffffff22) drop-shadow(0 0 6px #ffffff22) drop-shadow(0 0 7px #ffffff22);
+        opacity: 0.9;
+      }
+  }
