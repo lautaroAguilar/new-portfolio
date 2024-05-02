@@ -12,8 +12,9 @@
   letter-spacing: 2px;
 } */
 .description {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
+  align-self: end;
 }
 .fade_out_left {
   animation: fadeOutLeft 0.5s forwards;
