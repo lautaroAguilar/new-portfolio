@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import BackgroundAnimation from "@/components/BackgroundAnimation/BackgroundAnimation";
 import Section from "@/components/Section/Section";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
+import StickyManAnimation from "@/components/StickMan/StickMan";
 export default function Home() {
   return (
     <main className={`${styles.main} ${styles.background}`}>
@@ -13,6 +14,7 @@ export default function Home() {
         <Section/>
       </section>
       <SocialMedia/>
+      <StickyManAnimation/>
     </main>
   );
 }
