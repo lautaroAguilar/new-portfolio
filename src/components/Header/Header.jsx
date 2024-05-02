@@ -19,14 +19,14 @@ export default function Header() {
           <li className={styles.link} onClick={() => changeSection("Inicio")}>
             Inicio
           </li>
-          <li className={styles.link} onClick={() => changeSection("Contacto")}>
-            Contacto
-          </li>
           <li
             className={styles.link}
             onClick={() => changeSection("Proyectos")}
           >
             Proyectos
+          </li>
+          <li className={styles.link} onClick={() => changeSection("Contacto")}>
+            Contacto
           </li>
         </ul>
     </header>
