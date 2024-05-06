@@ -14,7 +14,7 @@ export default function Home() {
         <Section/>
       </section>
       <SocialMedia/>
-      <StickyManAnimation/>
+      {/* <StickyManAnimation/> */}
     </main>
   );
 }
