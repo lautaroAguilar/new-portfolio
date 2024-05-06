@@ -1,6 +1,7 @@
-.sticky_man{
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    
+.sticky_man {
+  position: absolute;
+  bottom: 3.3rem;
+  left: 6.6rem;
+  height: 3rem;
+  width: 3rem;
 }
