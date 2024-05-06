@@ -18,11 +18,12 @@
   align-items: flex-start;
 }
 .section{
-  width: 20%;
-  height: auto;
+  width: 30%;
+  height: 100%;
   position: absolute;
   right: 2rem;
   bottom: 2rem;
+  align-content: end;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
