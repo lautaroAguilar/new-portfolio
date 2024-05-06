@@ -19,10 +19,11 @@
   font-weight: 400;
   font-size: 12px;
   padding: 4px 0;
+  animation: reverseHoverLinks .5s ease-in-out forwards;
 }
 .link:hover {
   color: #ffffff; /* color del texto */
-  animation: shining 1s ease-in-out infinite;
+  animation: hoverLinks .5s ease-in-out forwards;
   cursor: pointer;
 }
 .texts {
@@ -41,11 +42,12 @@
   font-size: 12px;
 }
 
-@keyframes shining {
+@keyframes hoverLinks {
   0% {
     text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff,
       0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
     opacity: 1;
+    transform: translateX(0%);
   }
   50% {
     text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff, 0 0 35px #ffffff,
@@ -56,6 +58,15 @@
     text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff,
       0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
     opacity: 1;
+    transform: translateX(5%);
+  }
+}
+@keyframes reverseHoverLinks {
+  0%{
+    transform: translateX(5%);
+  }
+  100%{
+    transform: translateX(0%);
   }
 }
 @keyframes titleShining {

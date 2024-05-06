@@ -3,6 +3,7 @@ import { useAppContext } from "@/context/appContext";
 import styles from "./Section.module.css";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ProjectsSection from "../ProjectsSection/ProjectsSection";
 export default function Section() {
   const { sectionState, isExiting } = useAppContext();
   const [animationClass, setAnimationClass] = useState("");
@@ -37,11 +38,7 @@ export default function Section() {
       )}
       {currentSection === "Proyectos" && (
         <div className={`${styles.container} ${animationClass}`}>
-          <p className={` ${styles.description}`}>
-            Aorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum,
-            voluptas, eos ad inventore nostrum veritatis nulla enim. Mollitia
-            labore obcaecati ea ex rem. Consectetur quisquam dictaA XD
-          </p>
+          <ProjectsSection/>
         </div>
       )}
       {currentSection === "Contacto" && (
