@@ -2,7 +2,9 @@ import React from "react";
 import styles from "./ProjectsSection.module.css";
 import { Bodoni_Moda } from "next/font/google";
 import Link from "next/link";
-import { FaGithub, FaFigma } from "react-icons/fa";
+import { FaGithub, FaFigma, } from "react-icons/fa";
+import { FaInfo } from "react-icons/fa6";
+import { Tooltip } from "@mui/material";
 export const bodoni = Bodoni_Moda({
   weight: ["400", "700", "900"],
   subsets: ["latin"],
@@ -25,11 +27,13 @@ const projects = [
     title: "Cyber Cloud Networks",
     subtitle: "Desarrollo - 3 meses",
     description:
-      "Para Cyber Cloud, pude colaborar con temas de diseño. Creé componentes estilizados para diferentes pantallas a lo largo del flujo de la plataforma. También implementé librerías de componentes como Material UI.",
-    id: 2,
-    icon: "",
+      "Para Cyber Cloud, pude colaborar con temas de diseño. Creé componentes estilizados para diferentes pantallas a lo largo del flujo de la plataforma.",
+    secondDescription: "Para estilizar los componentes utilicé styled-components. También implementé librerías de componentes como Material UI.",
+      id: 2,
+    icon: "Tooltip",
     iconLink: "",
     seeMore: "",
+    tooltip: "Al ser un proyecto privado no tengo imagenes para poder mostrar."
   },
   {
     title: "Tandu - Eduzontal",
@@ -156,9 +160,14 @@ export default function ProjectsSection() {
               <Link href={project.iconLink} target="_blank">
                 <FaFigma className={styles.shining} />
               </Link>
-            ) : (
-              <div></div>
-            )}
+            ) : project.icon === "Tooltip" ? (
+              <Tooltip title={project.tooltip} >
+                <div>
+                  <FaInfo />
+                </div>
+              </Tooltip>
+            ) : ( <div></div> )
+            }
           </div>
         </div>
       ))}
