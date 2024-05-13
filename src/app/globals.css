@@ -10,6 +10,12 @@ body {
   overflow: hidden;
   font-family: 'Courier New', Courier, monospace;
   scroll-behavior: smooth;
+  -webkit-touch-callout: none; /* Deshabilitar el menú emergente al mantener presionado en iOS */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* No seleccionable */
 }
 
 body {
