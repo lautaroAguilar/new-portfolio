@@ -27,6 +27,7 @@ body {
       #1a1a1a 100%
   );
   animation: animateBG 15s ease infinite; 
+  color: #F5F5F5;
 }
 
 a {
@@ -34,11 +35,7 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+
 @keyframes animateBG {
   0% {
 		background-position: 0% 50%;
