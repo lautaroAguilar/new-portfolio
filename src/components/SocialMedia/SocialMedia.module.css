@@ -17,6 +17,12 @@
     animation: shining 1s ease-in-out infinite; 
     cursor: pointer;
 }
+@media (max-width: 768px){
+    .social_media{
+        left: 1rem;
+        bottom: 1rem;
+    }
+  }
 @keyframes shining {
     0% {
         filter: drop-shadow(0 0 1px #ffffff22) drop-shadow(0 0 2px #ffffff22) drop-shadow(0 0 3px #ffffff22) drop-shadow(0 0 4px #ffffff22) drop-shadow(0 0 5px #ffffff22) drop-shadow(0 0 6px #ffffff22) drop-shadow(0 0 7px #ffffff22);

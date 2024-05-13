@@ -31,6 +31,13 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
-  
+@media (max-width: 768px) {
+  .main{
+    padding: 1rem;
+  }
+  .section{
+    width: 60%;
+    right: 1rem;
+    bottom: 1rem;
+  }
 }
