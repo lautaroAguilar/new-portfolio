@@ -3,8 +3,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: flex-end;
   gap: 1rem;
   scrollbar-color: transparent transparent;
 }
@@ -16,7 +16,7 @@
 .description {
   font-size: 12px;
   font-weight: 500;
-  align-self: end;
+  align-self: flex-end;
 }
 .fade_out_left {
   animation: fadeOutLeft 0.5s forwards;

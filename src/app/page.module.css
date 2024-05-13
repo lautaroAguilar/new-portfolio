@@ -23,7 +23,7 @@
   position: absolute;
   right: 2rem;
   bottom: 2rem;
-  align-content: end;
+  align-content: flex-end;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {

@@ -135,7 +135,7 @@ export default function ProjectsSection() {
   return (
     <div className={styles.container}>
       {projects.map((project) => (
-        <div id={project.id} className={styles.card}>
+        <div key={project.id} className={styles.card}>
           <h2 className={`${styles.title} ${bodoni.className}`}>
             {project.title}
           </h2>
