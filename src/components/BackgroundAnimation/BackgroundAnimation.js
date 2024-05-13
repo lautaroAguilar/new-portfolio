@@ -1,6 +1,4 @@
-'use client'
-// BackgroundAnimation.js
-
+"use client"
 import React, { useRef, useEffect } from 'react';
 
 const BackgroundAnimation = () => {
@@ -41,9 +39,9 @@ const BackgroundAnimation = () => {
 
     const render = (time) => {
       gl.uniform1f(timeUniformLocation, time / 10000); // Reducir aún más la velocidad de cambio
-      gl.uniform2f(resolutionUniformLocation, canvas.width, canvas.height);
+      gl.uniform2f(resolutionUniformLocation, window.innerWidth, window.innerHeight); // Aquí movemos la obtención de width y height
 
-      gl.clearColor(0, 0, 0, 1);
+      gl.clearColor(0, 0, 0, 0.1);
       gl.clear(gl.COLOR_BUFFER_BIT);
 
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
@@ -61,9 +59,7 @@ const BackgroundAnimation = () => {
   return (
     <canvas
       ref={canvasRef}
-      style={{ position: 'fixed', top: 0, left: 0, zIndex: -1 }}
-      width={window.innerWidth}
-      height={window.innerHeight}
+      style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}
     ></canvas>
   );
 };
@@ -95,10 +91,9 @@ const fragmentShaderSource = `
     vec3 color = vec3(0.0);
 
     // Agregar efecto de grano con píxeles más grandes y reducir la intensidad
-    float grain = random(u_time + gl_FragCoord.x + gl_FragCoord.y * 0.1) * 0.1; // Reducir la intensidad del grano
+    float grain = random(u_time + gl_FragCoord.x + gl_FragCoord.y * 0.5) * 0.04; // Reducir aún más la intensidad del grano
     color += grain;
 
     gl_FragColor = vec4(color, 1.0);
   }
 `;
-
