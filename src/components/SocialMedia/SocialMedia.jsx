@@ -21,7 +21,7 @@ export default function SocialMedia() {
           <FaLinkedin className={styles.shining} />
         </Link>
       </Tooltip>
-      <Tooltip title={"Descargar PDF"}>
+      <Tooltip title={"CV"}>
         <a href="/cv.pdf" download="cv">
           <FaFilePdf className={styles.shining} />
         </a>

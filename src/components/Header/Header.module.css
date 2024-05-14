@@ -19,11 +19,11 @@
   font-weight: 400;
   font-size: 12px;
   padding: 4px 0;
-  animation: reverseHoverLinks .5s ease-in-out forwards;
+  animation: reverseHoverLinks .2s ease-in-out forwards;
 }
 .link:hover {
   color: #ffffff; /* color del texto */
-  animation: hoverLinks .5s ease-in-out forwards;
+  animation: hoverLinks .1s ease-in-out forwards;
   cursor: pointer;
 }
 .texts {
