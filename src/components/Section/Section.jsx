@@ -44,7 +44,7 @@ export default function Section() {
       {currentSection === "Contacto" && (
         <div className={`${styles.container} ${animationClass}`}>
           <Link
-            className={styles.description}
+            className={`${styles.description} ${styles.shining}`}
             target="_blank"
             href={
               "mailto:eley.aramis@gmail.com?subject=Contacto desde el portfolio de Lautaro&body=Escriba su mensaje aquí"
