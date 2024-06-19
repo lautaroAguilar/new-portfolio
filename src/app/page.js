@@ -1,20 +1,22 @@
-import Image from "next/image";
+"use client"
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
 import BackgroundAnimation from "@/components/BackgroundAnimation/BackgroundAnimation";
 import Section from "@/components/Section/Section";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
-import StickyManAnimation from "@/components/StickMan/StickMan";
+import ImageModal from "@/components/ImageModal/ImageModal";
+import { useAppContext } from "@/context/appContext";
 export default function Home() {
+  const { isOpen, images, closeModal } = useAppContext();
   return (
     <main className={`${styles.main} ${styles.background}`}>
-      <BackgroundAnimation/>
+      <BackgroundAnimation />
       <Header />
       <section className={`${styles.section}`}>
-        <Section/>
+        <Section />
       </section>
-      <SocialMedia/>
-      {/* <StickyManAnimation/> */}
+      <SocialMedia />
+      {isOpen && <ImageModal images={images} onClose={closeModal} />}
     </main>
   );
 }

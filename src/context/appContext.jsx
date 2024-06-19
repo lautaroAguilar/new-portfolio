@@ -6,6 +6,18 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
   const [sectionState, setSectionState] = useState("Inicio");
   const [isExiting, setIsExiting] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [images, setImages] = useState([]);
+
+  const openModal = (images) => {
+    setImages(images);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setImages([]);
+  };
   const changeSection = (newSection) => {
     setIsExiting(true);
     setTimeout(() => {
@@ -21,6 +33,10 @@ export function AppProvider({ children }) {
         changeSection,
         isExiting,
         setIsExiting,
+        isOpen,
+        images,
+        openModal,
+        closeModal,
       }}
     >
       {children}
