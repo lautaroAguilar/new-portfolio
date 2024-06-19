@@ -11,7 +11,11 @@ export const projects = [
     iconLink: "",
     seeMore: "https://my.wapu.app/",
     images: [
-      // URLs de imágenes para el proyecto Wapu
+      "test1.png",
+      "test2.png",
+      "test3.png",
+      "test4.png",
+      "newDesignHome.mp4"
     ],
   },
   {
