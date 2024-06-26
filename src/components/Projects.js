@@ -8,11 +8,7 @@ export const projects = [
       "Personalmente me tocó contribuir en todo lo relacionado al frontend.",
     id: 1,
     images: [
-      "test1.png",
-      "test2.png",
-      "test3.png",
-      "test4.png",
-      "newDesignHome.mp4",
+      "wapuHome.png",
     ],
   },
   {
@@ -24,7 +20,10 @@ export const projects = [
       "Para estilizar los componentes utilicé styled-components. También implementé librerías de componentes como Material UI.",
     id: 2,
     images: [
-      // URLs de imágenes para el proyecto Cyber Cloud Networks
+      "ccn.mp4",
+      "ccn3.png",
+      "ccn2.mp4",
+      "ccn4.png",
     ],
   },
   {
@@ -36,7 +35,8 @@ export const projects = [
       "A su vez contribuí con el prototipado en Figma y era responsable de comentar en las reuniones como sería el flujo del usuario.",
     id: 3,
     images: [
-      // URLs de imágenes para el proyecto Tandu - Eduzontal
+      "eduzontal2.png",
+      "eduzontal.png"
     ],
   },
   {
@@ -50,7 +50,7 @@ export const projects = [
     icon: "Github",
     iconLink: "https://github.com/lautaroAguilar/LeandroAguilar",
     images: [
-      // URLs de imágenes para el proyecto Página de Vendedor
+      "leandro.mp4"
     ],
   },
   {
@@ -65,7 +65,6 @@ export const projects = [
     iconLink: "https://github.com/lautaroAguilar/portfolio",
     seeMore: "https://portfolio-lautaroaguilar.vercel.app/",
     images: [
-      // URLs de imágenes para el proyecto Mi primer sitio web
     ],
   },
   {
@@ -91,7 +90,6 @@ export const projects = [
     id: 7,
     seeMore: "https://wapupay.com/",
     images: [
-      // URLs de imágenes para el proyecto Landing Wapu
     ],
   },
   {
@@ -104,7 +102,7 @@ export const projects = [
     iconLink:
       "https://www.figma.com/file/sStxx69csnpaoXyfnkg88h/Portfolio-LA?type=design&node-id=0%3A1&mode=design&t=Rj1ZINzjtD3NVEWO-1",
     images: [
-      // URLs de imágenes para el proyecto Primer sitio - Figma
+      "firstPortfolioDesign.mp4"
     ],
   },
   {
@@ -117,7 +115,7 @@ export const projects = [
     iconLink:
       "https://www.figma.com/file/O0Oov2cOaADOLg4DtdDylJ/Wapu?type=design&node-id=0%3A1&mode=design&t=ZiT14hVlSnA5bNMS-1",
     images: [
-      // URLs de imágenes para el proyecto Landing Wapu - Figma
+      "wapuLanding.mp4"
     ],
   },
   {
@@ -130,7 +128,7 @@ export const projects = [
     iconLink:
       "https://www.figma.com/file/6oWAeoYEST9Hq23ZwQrmj4/Reto-03?type=design&node-id=0%3A1&mode=dev&t=Rj1ZINzjtD3NVEWO-1",
     images: [
-      // URLs de imágenes para el proyecto Mi primer diseño - Figma
+      "firstDesignFigma.mp4"
     ],
   },
 ];
