@@ -48,9 +48,13 @@ const ImageModal = ({ images, onClose }) => {
             </Link>
           </div>
         )}
-        <FaArrowLeft onClick={prevImage} className={styles.btn} />
-        <FaArrowRight onClick={nextImage} className={styles.btn} />
-        <IoIosClose onClick={onClose} className={styles.btn} />
+        {images.length > 1 && (
+          <>
+            <FaArrowLeft onClick={prevImage} className={styles.btn} />
+            <FaArrowRight onClick={nextImage} className={styles.btn} />
+          </>
+        )}
+        <IoIosClose onClick={onClose} className={styles.closeBtn} />
       </div>
     </div>
   );
