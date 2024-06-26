@@ -9,7 +9,7 @@ import { useAppContext } from "@/context/appContext";
 export default function Home() {
   const { isOpen, images, closeModal } = useAppContext();
   return (
-    <main className={`${styles.main} ${styles.background}`}>
+    <main className={`${styles.main}`}>
       <BackgroundAnimation />
       <Header />
       <section className={`${styles.section}`}>

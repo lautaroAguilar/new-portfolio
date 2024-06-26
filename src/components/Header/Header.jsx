@@ -15,7 +15,7 @@ export default function Header() {
         <h1 className={`${bodoni.className} ${styles.title}`}>
           Lautaro Aguilar
         </h1>
-        <p className={styles.description}>Desarrollador web</p>
+        <p className={styles.description}>Desarrollador Frontend</p>
       </div>
       <ul className={styles.links}>
         <li className={styles.link} onClick={() => changeSection("Inicio")}>
