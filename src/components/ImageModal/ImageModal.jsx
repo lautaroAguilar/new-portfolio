@@ -22,7 +22,7 @@ const ImageModal = ({ images, onClose }) => {
             <video
               className={styles.image}
               controls
-              onError={() => alert("Error al cargar las imágenes, lo lamento")}
+              onError={() => alert("Hubo un error al cargar las imágenes, lo siento. De ser posible, házmelo saber.")}
             >
               <source src={images[currentImage]} type="video/mp4" />
             </video>
@@ -31,7 +31,7 @@ const ImageModal = ({ images, onClose }) => {
               src={images[currentImage]}
               alt="Project Image"
               className={styles.image}
-              onError={() => alert("Error al cargar las imágenes, lo lamento")}
+              onError={() => alert("Hubo un error al cargar las imágenes, lo siento. De ser posible, házmelo saber.")}
             />
           )
         ) : (

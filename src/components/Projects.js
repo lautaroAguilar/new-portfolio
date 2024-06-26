@@ -7,15 +7,12 @@ export const projects = [
     secondDescription:
       "Personalmente me tocó contribuir en todo lo relacionado al frontend.",
     id: 1,
-    icon: "",
-    iconLink: "",
-    seeMore: "https://my.wapu.app/",
     images: [
       "test1.png",
       "test2.png",
       "test3.png",
       "test4.png",
-      "newDesignHome.mp4"
+      "newDesignHome.mp4",
     ],
   },
   {
@@ -26,10 +23,6 @@ export const projects = [
     secondDescription:
       "Para estilizar los componentes utilicé styled-components. También implementé librerías de componentes como Material UI.",
     id: 2,
-    icon: "Tooltip",
-    iconLink: "",
-    seeMore: "",
-    tooltip: "Al ser un proyecto privado no tengo imagenes para poder mostrar.",
     images: [
       // URLs de imágenes para el proyecto Cyber Cloud Networks
     ],
@@ -42,11 +35,6 @@ export const projects = [
     secondDescription:
       "A su vez contribuí con el prototipado en Figma y era responsable de comentar en las reuniones como sería el flujo del usuario.",
     id: 3,
-    icon: "Figma",
-    iconLink:
-      "https://www.figma.com/file/xmD8h1fYktW06IktIVnRnV/Eduzontal?type=design&node-id=0%3A1&mode=design&t=Rj1ZINzjtD3NVEWO-1",
-    seeMore:
-      "https://www.figma.com/proto/xmD8h1fYktW06IktIVnRnV/Eduzontal?type=design&node-id=280-1516&t=IcSLu4bYSou0SSfK-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=280%3A1516&show-proto-sidebar=1&mode=design",
     images: [
       // URLs de imágenes para el proyecto Tandu - Eduzontal
     ],
@@ -61,7 +49,6 @@ export const projects = [
     id: 4,
     icon: "Github",
     iconLink: "https://github.com/lautaroAguilar/LeandroAguilar",
-    seeMore: "https://leandro-aguilar.vercel.app/",
     images: [
       // URLs de imágenes para el proyecto Página de Vendedor
     ],
@@ -82,15 +69,14 @@ export const projects = [
     ],
   },
   {
-    title: "Landing CyberCloud",
-    subtitle: "Wordpress - 1 mes",
-    description:
-      "Esta fue mi primer experiencia con Wordpress, es una landing page sencilla con algunas páginas de producto.",
-    secondDescription: "El sitio fue creado a partir de un diseño en Figma.",
+    title: "Olga Quiz",
+    subtitle: "Desarrollo - 1 semana",
+    description: `Creé una simple “App web” de preguntas y respuestas para el canal de streaming Olga, sobre su programa “Soñé que Volaba”.`,
+    secondDescription: "",
     id: 6,
-    icon: "",
-    iconLink: "",
-    seeMore: "https://cybercloudnetworks.com/",
+    icon: "Github",
+    iconLink: "https://github.com/lautaroAguilar/olga",  
+    seeMore: "https://olga-quiz.netlify.app/",
     images: [
       // URLs de imágenes para el proyecto Landing CyberCloud
     ],
@@ -99,12 +85,10 @@ export const projects = [
     title: "Landing Wapu",
     subtitle: "Desarrollo - 1 mes",
     description:
-      "Otra experiencia que tuve con wordpress fue creando la landing page de Wapu.",
+      "Esta fue mi primer experiencia con Wordpress, es una sencilla landing page.",
     secondDescription:
-      "También fue creada a partir de un diseño, esta vez propio, en Figma",
+      "El sitio fue creado a partir de un diseño propio, en Figma.",
     id: 7,
-    icon: "",
-    iconLink: "",
     seeMore: "https://wapupay.com/",
     images: [
       // URLs de imágenes para el proyecto Landing Wapu
@@ -119,8 +103,6 @@ export const projects = [
     icon: "Figma",
     iconLink:
       "https://www.figma.com/file/sStxx69csnpaoXyfnkg88h/Portfolio-LA?type=design&node-id=0%3A1&mode=design&t=Rj1ZINzjtD3NVEWO-1",
-    seeMore:
-      "https://www.figma.com/proto/sStxx69csnpaoXyfnkg88h/Portfolio-LA?type=design&node-id=0-1&t=Rj1ZINzjtD3NVEWO-0&scaling=min-zoom&starting-point-node-id=201%3A170",
     images: [
       // URLs de imágenes para el proyecto Primer sitio - Figma
     ],
@@ -134,8 +116,6 @@ export const projects = [
     icon: "Figma",
     iconLink:
       "https://www.figma.com/file/O0Oov2cOaADOLg4DtdDylJ/Wapu?type=design&node-id=0%3A1&mode=design&t=ZiT14hVlSnA5bNMS-1",
-    seeMore:
-      "https://www.figma.com/proto/O0Oov2cOaADOLg4DtdDylJ/Wapu?type=design&node-id=18-589&t=ouEh95iFX7xmklII-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=18%3A589&mode=design",
     images: [
       // URLs de imágenes para el proyecto Landing Wapu - Figma
     ],
@@ -149,8 +129,6 @@ export const projects = [
     icon: "Figma",
     iconLink:
       "https://www.figma.com/file/6oWAeoYEST9Hq23ZwQrmj4/Reto-03?type=design&node-id=0%3A1&mode=dev&t=Rj1ZINzjtD3NVEWO-1",
-    seeMore:
-      "https://www.figma.com/proto/6oWAeoYEST9Hq23ZwQrmj4/Reto-03?type=design&node-id=1-2&t=YXyQK0SxqiUJn8wZ-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A2&mode=design",
     images: [
       // URLs de imágenes para el proyecto Mi primer diseño - Figma
     ],

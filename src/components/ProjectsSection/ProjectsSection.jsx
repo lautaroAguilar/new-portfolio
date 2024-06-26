@@ -28,12 +28,18 @@ export default function ProjectsSection() {
             <p className={styles.description}>{project.secondDescription}</p>
           </div>
           <div className={styles.containerButton}>
-            <button
-              className={styles.button}
-              onClick={() => openModal(project.images)}
-            >
-              Ver Fotos
-            </button>
+            {project.seeMore ? (
+              <Link className={styles.button} href={project.seeMore} target="_blank">
+                Ver Más
+              </Link>
+            ) : (
+              <button
+                className={styles.button}
+                onClick={() => openModal(project.images)}
+              >
+                Ver Fotos
+              </button>
+            )}
             {project.icon === "Github" ? (
               <Link href={project.iconLink} target="_blank">
                 <FaGithub className={styles.shining} />
