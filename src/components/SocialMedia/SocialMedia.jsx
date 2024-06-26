@@ -22,9 +22,12 @@ export default function SocialMedia() {
         </Link>
       </Tooltip>
       <Tooltip title={"CV"}>
-        <a href="/cv.pdf" download="cv">
+        <Link
+          href={"https://docs.google.com/document/d/1VgT0vvmINF3Cbo-0Lf1Vdkv5qhjIiz3riRaFIAI3PiQ/edit?usp=sharing"}
+          target="_blank"
+        >
           <FaFilePdf className={styles.shining} />
-        </a>
+        </Link>
       </Tooltip>
     </div>
   );
