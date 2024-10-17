@@ -44,24 +44,3 @@
     0 0 20px #d7d7d7, 0 0 25px #d7d7d7, 0 0 30px #d7d7d7, 0 0 35px #d7d7d7;
   }
 }
-@keyframes fadeOutLeft {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}

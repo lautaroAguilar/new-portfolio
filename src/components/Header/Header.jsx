@@ -18,29 +18,40 @@ export default function Header() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 2,
-        delay: 1,
-        staggerChildren: 0.5,
+        duration: 1.5,
+        delay: 0.5,
       },
     },
   };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 2.5,
+        delay: 0.5,
+      },
+    },
   };
   return (
     <header className={styles.header}>
       <motion.div
         className={styles.texts}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, delay: 1 }}
+        variants={container}
+        initial="hidden"
+        animate="show"
       >
-        <h1 className={`${bodoni.className} ${styles.title}`}>
+        <motion.h1
+          className={`${bodoni.className} ${styles.title}`}
+          variants={item}
+        >
           Lautaro Aguilar
-        </h1>
-        <p className={styles.description}>Desarrollador Frontend</p>
+        </motion.h1>
+        <motion.p className={styles.description} variants={item}>
+          Desarrollador Frontend
+        </motion.p>
       </motion.div>
       <motion.ul
         className={styles.links}

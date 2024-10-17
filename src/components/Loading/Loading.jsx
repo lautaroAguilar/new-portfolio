@@ -22,10 +22,10 @@ const Loading = () => {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 2.5,
+        duration: 1.5,
         ease: "easeInOut",
         repeat: Infinity,
-        repeatDelay: 1.5,
+        repeatDelay: 1,
       },
     },
   };
@@ -36,7 +36,7 @@ const Loading = () => {
     visible: {
       opacity: 1,
       transition: {
-        duration: 4,
+        duration: 2.5,
         ease: "easeInOut",
         /* repeatDelay: 1, */
         repeat: Infinity,

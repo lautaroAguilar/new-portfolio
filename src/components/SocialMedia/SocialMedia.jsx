@@ -12,7 +12,7 @@ export default function SocialMedia() {
       className={styles.social_media}
       initial={{ opacity: 0, x: -10 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1, delay: 1 }}
+      transition={{ duration: 1, delay: 0.5 }}
     >
       <Tooltip title={"Github"}>
         <Link href={"https://github.com/lautaroAguilar"} target="_blank">
