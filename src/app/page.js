@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
 import BackgroundAnimation from "@/components/BackgroundAnimation/BackgroundAnimation";
@@ -9,6 +8,11 @@ import SocialMedia from "@/components/SocialMedia/SocialMedia";
 import ImageModal from "@/components/ImageModal/ImageModal";
 import { useAppContext } from "@/context/appContext";
 import Loading from "@/components/Loading/Loading";
+import dynamic from "next/dynamic";
+
+const Scene = dynamic( () => import ("@/components/Scene/Scene"), {
+  ssr: false
+})
 export default function Home() {
   const { isOpen, images, closeModal } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
@@ -26,7 +30,8 @@ export default function Home() {
         <Loading />
       ) : (
         <main className={`${styles.main}`}>
-          <BackgroundAnimation />
+          {/* <BackgroundAnimation /> */}
+          <Scene />
           <Header />
           <section className={`${styles.section}`}>
             <Section />
