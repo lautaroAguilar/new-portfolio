@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import { useAppContext } from "@/context/appContext";
 import styles from "./Loading.module.css";
 import { motion } from "framer-motion";
 
 const Loading = () => {
+  const { isMobile } = useAppContext();
   const svgVariants = {
     hidden: {
       opacity: 0,
@@ -50,7 +51,7 @@ const Loading = () => {
         initial="hidden"
         animate="visible"
         className={styles.illustration}
-        width="409"
+        width={isMobile ? "15%" : "5%"}
         height="354"
         viewBox="0 0 409 354"
         fill="none"
