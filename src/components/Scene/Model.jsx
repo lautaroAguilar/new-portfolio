@@ -1,15 +1,22 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF, MeshTransmissionMaterial } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
+import { useAppContext } from "@/context/appContext";
 
 export default function Model() {
   const { nodes } = useGLTF("medias/bear2.glb");
-  const { viewport, size } = useThree();
+  const { viewport, size, mouse } = useThree();
+  const { mousePosition } = useAppContext();
   const mesh = useRef();
 
   useFrame(() => {
-    mesh.current.rotation.x += 0.001;
-    mesh.current.rotation.y += 0.001;
+    if (mesh.current) {
+      const factor = -0.05;
+      mesh.current.position.x = mousePosition.x * factor;
+      mesh.current.position.y = mousePosition.y * factor;
+      mesh.current.rotation.x += 0.001;
+      mesh.current.rotation.y += 0.001;
+    }
   });
 
   const materialProps = {
@@ -21,9 +28,11 @@ export default function Model() {
     chromaticAberration: 0.1,
     backside: true,
   };
+
   useEffect(() => {
     console.log(size);
-  }, []);
+  }, [size]);
+
   return (
     <group
       scale={size.width < 768 ? viewport.width / 3.5 : viewport.width / 7}
