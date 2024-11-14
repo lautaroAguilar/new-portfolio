@@ -1,8 +1,8 @@
 import "./globals.css";
-import { DM_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { AppProvider } from "@/context/appContext";
-const dm_mono = DM_Mono({
-  weight: ["400", "500"],
+const montserrat = Montserrat({
+  weight: ["400", "600", "700", "900"],
   subsets: ["latin"],
 });
 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <AppProvider>
       <html lang="en">
-        <body className={dm_mono.className}>{children}</body>
+        <body className={montserrat.className}>{children}</body>
       </html>
     </AppProvider>
   );

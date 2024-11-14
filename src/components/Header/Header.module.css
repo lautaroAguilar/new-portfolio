@@ -12,18 +12,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 .link {
   list-style: none;
   font-weight: 400;
   font-size: 12px;
   padding: 4px 0;
-  animation: reverseHoverLinks .2s ease-in-out forwards;
 }
 .link:hover {
-  color: #ffffff; /* color del texto */
-  animation: hoverLinks .1s ease-in-out forwards;
+  color: #ffffff; 
   cursor: pointer;
 }
 .texts {
@@ -32,57 +30,35 @@
   gap: 1.5rem;
 }
 .title {
+  min-height: 50px;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
   animation: titleShining 1s ease-in-out infinite;
   line-height: 3rem;
 }
 .description {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  animation: titleShining 1s ease-in-out infinite;
 }
-
-@keyframes hoverLinks {
-  0% {
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff,
-      0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
-    opacity: 1;
-    transform: translateX(0%);
-  }
-  50% {
-    text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff, 0 0 35px #ffffff,
-      0 0 45px #ffffff, 0 0 55px #ffffff, 0 0 65px #ffffff, 0 0 75px #ffffff;
-    opacity: 0.9;
-  }
-  100% {
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff,
-      0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0 0 70px #ffffff;
-    opacity: 1;
-    transform: translateX(5%);
-  }
-}
-@keyframes reverseHoverLinks {
-  0%{
-    transform: translateX(5%);
-  }
-  100%{
-    transform: translateX(0%);
+@media (max-width: 768px){
+  .title{
+    min-height: 110px;
+    max-width: 50px; /* para que no se rompa el efecto a mitad de camino */
   }
 }
 @keyframes titleShining {
-  0% {
+  0%,100% {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
-      0 0 15px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.3),
-      0 0 50px rgba(255, 255, 255, 0.3);
+      0 0 3px rgba(255, 255, 255, 0.3), 0 0 8px rgba(255, 255, 255, 0.3),
+      0 0 13px rgba(255, 255, 255, 0.3);
   }
   50% {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
-      0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.3),
-      0 0 60px rgba(255, 255, 255, 0.3);
-  }
-  100% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
-      0 0 15px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.3),
-      0 0 50px rgba(255, 255, 255, 0.3);
+      0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.3);
   }
 }

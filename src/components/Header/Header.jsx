@@ -2,12 +2,12 @@
 import { useAppContext } from "@/context/appContext";
 import styles from "./Header.module.css";
 import { motion } from "framer-motion";
-import { Bodoni_Moda } from "next/font/google";
-import { duration } from "@mui/material";
-export const bodoni = Bodoni_Moda({
-  weight: ["400", "700", "900"],
+import { Anton } from "next/font/google";
+import Typewriter from "../Typewriter";
+export const anton = Anton({
+  weight: ["400"],
   subsets: ["latin"],
-  style: ["italic", "normal"],
+  style: ["normal"],
 });
 export default function Header() {
   const { changeSection } = useAppContext();
@@ -35,6 +35,8 @@ export default function Header() {
       },
     },
   };
+  const words = ["Desarrollador Frontend", "Diseñador Web", "Autodidacta"];
+
   return (
     <header className={styles.header}>
       <motion.div
@@ -43,14 +45,14 @@ export default function Header() {
         initial="hidden"
         animate="show"
       >
-        <motion.h1
-          className={`${bodoni.className} ${styles.title}`}
+        <motion.h2
+          className={`${anton.className} ${styles.title}`}
           variants={item}
         >
-          Lautaro Aguilar
-        </motion.h1>
+          <Typewriter words={words} />
+        </motion.h2>
         <motion.p className={styles.description} variants={item}>
-          Desarrollador Frontend
+          Lautaro Aguilar
         </motion.p>
       </motion.div>
       <motion.ul
@@ -63,6 +65,11 @@ export default function Header() {
           className={styles.link}
           onClick={() => changeSection("Inicio")}
           variants={item}
+          whileHover={{
+            translateX: 5,
+            textShadow: "0 0 15px rgba(255, 255, 255, 1)",
+            transition: { duration: 0.5 },
+          }}
         >
           Inicio
         </motion.li>
@@ -70,6 +77,11 @@ export default function Header() {
           className={styles.link}
           onClick={() => changeSection("Proyectos")}
           variants={item}
+          whileHover={{
+            translateX: 5,
+            textShadow: "0 0 15px rgba(255, 255, 255, 1)",
+            transition: { duration: 0.5 },
+          }}
         >
           Proyectos
         </motion.li>
@@ -77,6 +89,11 @@ export default function Header() {
           className={styles.link}
           onClick={() => changeSection("Contacto")}
           variants={item}
+          whileHover={{
+            translateX: 5,
+            textShadow: "0 0 15px rgba(255, 255, 255, 1)",
+            transition: { duration: 0.5 },
+          }}
         >
           Contacto
         </motion.li>
