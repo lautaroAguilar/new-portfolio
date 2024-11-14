@@ -1,25 +1,29 @@
 import React from "react";
 import styles from "./ProjectsSection.module.css";
 import { projects } from "../Projects";
-import { Bodoni_Moda } from "next/font/google";
 import Link from "next/link";
 import { FaGithub, FaFigma } from "react-icons/fa";
 import { FaInfo } from "react-icons/fa6";
 import { Tooltip } from "@mui/material";
 import { useAppContext } from "@/context/appContext";
-export const bodoni = Bodoni_Moda({
-  weight: ["400", "700", "900"],
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-});
+import { motion } from "framer-motion";
+
 
 export default function ProjectsSection() {
   const { openModal } = useAppContext();
   return (
-    <div className={styles.container}>
+    <div className={styles.projectsSection__container}>
       {projects.map((project) => (
-        <div key={project.id} className={styles.card}>
-          <h2 className={`${styles.title} ${bodoni.className}`}>
+        <motion.div
+          key={project.id}
+          className={styles.card}
+          whileHover={{
+            translateX: -5,
+            boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
+            transition: { duration: 0.5 },
+          }}
+        >
+          <h2 className={`${styles.title} `}>
             {project.title}
           </h2>
           <h4 className={styles.subtitle}>{project.subtitle}</h4>
@@ -29,7 +33,11 @@ export default function ProjectsSection() {
           </div>
           <div className={styles.containerButton}>
             {project.seeMore ? (
-              <Link className={styles.button} href={project.seeMore} target="_blank">
+              <Link
+                className={styles.button}
+                href={project.seeMore}
+                target="_blank"
+              >
                 Ver Más
               </Link>
             ) : (
@@ -42,11 +50,11 @@ export default function ProjectsSection() {
             )}
             {project.icon === "Github" ? (
               <Link href={project.iconLink} target="_blank">
-                <FaGithub className={styles.shining} />
+                <FaGithub />
               </Link>
             ) : project.icon === "Figma" ? (
               <Link href={project.iconLink} target="_blank">
-                <FaFigma className={styles.shining} />
+                <FaFigma />
               </Link>
             ) : project.icon === "Tooltip" ? (
               <Tooltip title={project.tooltip}>
@@ -58,7 +66,7 @@ export default function ProjectsSection() {
               <div></div>
             )}
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

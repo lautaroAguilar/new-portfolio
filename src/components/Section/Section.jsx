@@ -48,10 +48,9 @@ export default function Section() {
             exit="exit"
           >
             <p className={` ${styles.description}`}>
-              Hola soy Lautaro, crecí en Buenos Aires. Cuando era chico me
-              gustaban los videojuegos de resolver misterios, ahora de alguna u
-              otra forma juego a resolver problemas desarrollando proyectos en
-              la web.
+              Hola soy Lautaro, tengo 22 años y soy de Buenos Aires. Me gusta el
+              diseño y el desarrollo. Estoy en busca de ser un profesional en la
+              creación de experiencias agradables y de calidad.
             </p>
           </motion.div>
         )}
@@ -79,13 +78,21 @@ export default function Section() {
             exit="exit"
           >
             <Link
-              className={`${styles.description} ${styles.shining}`}
+              className={`${styles.description} `}
               target="_blank"
               href={
                 "mailto:eley.aramis@gmail.com?subject=Contacto desde el portfolio de Lautaro&body=Escriba su mensaje aquí"
               }
             >
-              Lautaro Aguilar
+              <motion.span
+                whileHover={{
+                  translateY: -5,
+                  textShadow: "0 0 15px rgba(255, 255, 255, 1)",
+                  transition: { duration: 0.5 },
+                }}
+              >
+                Lautaro Aguilar
+              </motion.span>
             </Link>
           </motion.div>
         )}
