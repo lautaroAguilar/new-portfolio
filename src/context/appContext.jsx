@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect} from "react";
 
 const AppContext = createContext();
 
@@ -8,7 +8,8 @@ export function AppProvider({ children }) {
   const [isExiting, setIsExiting] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [images, setImages] = useState([]);
-
+  const [isMobile, setIsMobile] = useState(false);
+  
   const openModal = (images) => {
     setImages(images);
     setIsOpen(true);
@@ -25,7 +26,11 @@ export function AppProvider({ children }) {
       setIsExiting(false);
     }, 500);
   };
-
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
   return (
     <AppContext.Provider
       value={{
@@ -37,6 +42,7 @@ export function AppProvider({ children }) {
         images,
         openModal,
         closeModal,
+        isMobile
       }}
     >
       {children}
