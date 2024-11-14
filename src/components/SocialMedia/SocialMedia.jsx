@@ -16,7 +16,15 @@ export default function SocialMedia() {
     >
       <Tooltip title={"Github"}>
         <Link href={"https://github.com/lautaroAguilar"} target="_blank">
-          <FaGithub className={styles.shining} />
+          <motion.div
+            whileHover={{
+              translateY: -5,
+              textShadow: "0 0 15px rgba(255, 255, 255, 1)",
+              transition: { duration: 0.5 },
+            }}
+          >
+            <FaGithub className={styles.shining} />
+          </motion.div>
         </Link>
       </Tooltip>
       <Tooltip title={"Linkedin"}>
@@ -24,7 +32,15 @@ export default function SocialMedia() {
           href={"https://www.linkedin.com/in/lautaro-aguilar-83a3a923b/"}
           target="_blank"
         >
-          <FaLinkedin className={styles.shining} />
+          <motion.div
+            whileHover={{
+              translateY: -5,
+              textShadow: "0 0 15px rgba(255, 255, 255, 1)",
+              transition: { duration: 0.5 },
+            }}
+          >
+            <FaLinkedin className={styles.shining} />
+          </motion.div>
         </Link>
       </Tooltip>
       <Tooltip title={"CV"}>
@@ -34,7 +50,15 @@ export default function SocialMedia() {
           }
           target="_blank"
         >
-          <FaFilePdf className={styles.shining} />
+          <motion.div
+            whileHover={{
+              translateY: -5,
+              textShadow: "0 0 15px rgba(255, 255, 255, 1)",
+              transition: { duration: 0.5 },
+            }}
+          >
+            <FaFilePdf className={styles.shining} />
+          </motion.div>
         </Link>
       </Tooltip>
     </motion.div>
